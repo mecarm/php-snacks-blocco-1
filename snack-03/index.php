@@ -26,7 +26,7 @@ $posts = [
             'text' => 'Testo post 3'
         ]
     ],
-    '15/05/2019' => [
+    '15/05/2019' => [ 
         [
             'title' => 'Post 4',
             'author' => 'Michele Papagni',
@@ -44,11 +44,15 @@ $posts = [
         ]
     ],
 ];
-
+//all'array post associa il primo giro di ciclo e alla prima dimensione nella posizione dove si trovano le date associamo alla variabile $date
+// entra "=>" e dove ti trovi ora per richiamarti uso la variabile $array
 foreach ($posts as $date => $array) {
-
+    //stampa le date in maiuscolo
     echo "<br><b># $date</b><br>";
+    //cicla sull'array all'interno di date e associa alla variabile $key le chiavi dell'array.
+    // => entra nella chiave e associa il valore di ogni chiave a $value.
     foreach ($array as $key => $value) {
+        // stampa il value title , value author e value text sottoforma di elementi di una lista.
         echo "<li>$value[title]</li>" . "<li>$value[author]</li>" . "<li>$value[text]</li>";
     }
 }
