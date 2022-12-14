@@ -5,8 +5,8 @@ Creare un array con 15 numeri casuali, tenendo conto che l’array non dovrà co
 */
 
 $array = [];
-for ( $i = 0; $i < 15; $i++ ) {
-    $number = rand(1, 1000);
+for ( $i = 0; count($array) < 15; $i++ ) {
+    $number = rand(1, 100);
     if( !in_array($number, $array)){
         $array[] = $number;
     }
