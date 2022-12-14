@@ -26,18 +26,15 @@ $db = [
         ]
     ]
 ];
-// for ($i=0; $i < count($db); $i++) { 
-//     echo("<div style='background-color: grey;'>{$db}</div>")
-// }
+//ciclo foreach per estrarre i due array teachers e pm
 foreach ($db as $type => $array) {
-
+    // stampa di teachers e pm
     echo "<br><b># $type</b><br>";
-    echo "<div></div>";
+    //Ciclo Foreach per estrarre le chiavi name e lastname
     foreach ($array as $key) {
         echo "<div class='$type'>$key[name] $key[lastname] </div>";
         // var_dump($key['name']);
     }
-    
 }
 
 ?>
@@ -49,6 +46,5 @@ foreach ($db as $type => $array) {
     .pm{
         background-color: lightgreen;
         width: 10%;
-
     }
 </style>
